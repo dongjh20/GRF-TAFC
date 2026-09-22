@@ -81,6 +81,51 @@
       height: auto;
     }
 
+    .experiment-overview {
+      padding: 3.5rem 1.5rem 1rem;
+    }
+
+    .experiment-overview .title {
+      margin-bottom: 0;
+    }
+
+    .prompt-examples {
+      background: #fff;
+    }
+
+    .prompt-section-title {
+      margin-bottom: 2.5rem !important;
+      text-align: center;
+    }
+
+    .prompt-example {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+
+    .prompt-example:last-child {
+      margin-bottom: 0;
+    }
+
+    .prompt-example-title {
+      margin-bottom: 1.25rem !important;
+      text-align: center;
+    }
+
+    .prompt-figure {
+      overflow: hidden;
+      border: 1px solid var(--grf-border);
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(40, 57, 83, 0.08);
+    }
+
+    .prompt-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .experiment-intro {
       max-width: 860px;
       margin: 0.75rem auto 0;
@@ -159,7 +204,8 @@
 
     @media screen and (max-width: 768px) {
       .project-section,
-      .task-category {
+      .task-category,
+      .experiment-overview {
         padding: 2.5rem 1rem;
       }
 
@@ -237,6 +283,12 @@
 
 
 <!-- Real-world experiments -->
+<section class="section experiment-overview" id="real-world-experiments">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Real-World Experiment</h2>
+  </div>
+</section>
+
 <section class="task-category" id="spacing-adjustment">
   <div class="container is-max-desktop">
     <h2 class="title is-3 task-heading">1. Longitudinal Spacing Adjustment</h2>
@@ -373,6 +425,30 @@
   </div>
 </section>
 <!-- End real-world experiments -->
+
+
+
+<!-- Prompt examples -->
+<section class="section project-section prompt-examples" id="prompt-examples">
+  <div class="container">
+    <h2 class="title is-2 prompt-section-title">Prompt Example</h2>
+
+    <div class="prompt-example">
+      <h3 class="title is-3 prompt-example-title">1. Context-Grounded Formation Generation</h3>
+      <figure class="prompt-figure">
+        <img src="static/images/prompt-complete.jpg" alt="Complete prompt example for context-grounded formation generation" loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <div class="prompt-example">
+      <h3 class="title is-3 prompt-example-title">2. Execution-Driven Reflection</h3>
+      <figure class="prompt-figure">
+        <img src="static/images/reflection-prompt-complete.jpg" alt="Complete prompt example for execution-driven reflection" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- End prompt examples -->
 
 
 
