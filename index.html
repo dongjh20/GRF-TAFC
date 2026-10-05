@@ -126,6 +126,18 @@
       height: auto;
     }
 
+    .prompt-instruction {
+      margin: 1rem 0 0;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid #f58220;
+      background: #fff8f0;
+      line-height: 1.6;
+    }
+
+    .prompt-instruction p + p {
+      margin-top: 0.5rem;
+    }
+
     .experiment-intro {
       max-width: 860px;
       margin: 0.75rem auto 0;
@@ -438,6 +450,10 @@
       <figure class="prompt-figure">
         <img src="static/images/prompt-complete.jpg" alt="Complete prompt example for context-grounded formation generation" loading="lazy" decoding="async">
       </figure>
+      <div class="prompt-instruction" id="knowledge-conflict-resolution">
+        <p><strong>Retrieval Instructions: Conflict Resolution</strong></p>
+        <p>Among retrieved knowledge sources, give [Domain Knowledge] the highest priority. If [Experience Memory] conflicts with [Domain Knowledge], follow [Domain Knowledge] and disregard the conflicting experience recommendation.</p>
+      </div>
     </div>
 
     <div class="prompt-example">
