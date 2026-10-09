@@ -1515,3 +1515,78 @@ a:focus {
     box-shadow: none !important;
   }
 }
+
+/* Reflection ablation and experience transfer */
+.reflection-study { background: #f7f9fb; }
+.reflection-study .study-intro { max-width: 850px; margin: 0 auto 2rem; line-height: 1.75; }
+.reflection-study .scenario-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin: 2rem 0; }
+.reflection-study .scenario-comparison figure { margin: 0; padding: 1.25rem; background: white; border: 1px solid #e1e6ed; border-radius: 12px; text-align: center; }
+.reflection-study .scenario-comparison img { width: 100%; height: 490px; object-fit: contain; }
+.reflection-study figcaption { margin-top: 1rem; font-size: .9rem; line-height: 1.6; }
+.reflection-study .content { line-height: 1.75; }
+.reflection-study .content h3 { margin-top: 2rem; }
+.reflection-study blockquote { border-left: 4px solid #3273dc; background: #eef3fa; overflow-wrap: anywhere; }
+.reflection-study .results-scroll { overflow-x: auto; border: 1px solid #e1e6ed; border-radius: 8px; background: white; }
+.reflection-study .results-table { margin-bottom: 0; min-width: 650px; }
+.reflection-study .results-table caption { padding: 1rem; text-align: left; font-weight: 600; }
+.reflection-study .results-table th, .reflection-study .results-table td { vertical-align: middle; padding: .65rem .85rem; }
+.reflection-study .results-table tbody th { font-weight: 500; }
+.reflection-study .results-table td { text-align: center; }
+.reflection-study .results-table .scenario-group th { background: #eaf0f7; font-weight: 600; }
+.reflection-study .configuration { display: block; color: #526171; font-size: .88em; }
+.reflection-study .results-note { font-size: .9rem; line-height: 1.65; margin-top: 1rem; }
+@media screen and (max-width: 768px) {
+  .reflection-study .scenario-comparison { grid-template-columns: 1fr; gap: 1.25rem; }
+  .reflection-study .scenario-comparison img { height: auto; max-height: 560px; }
+}
+
+/* Click-to-enlarge scenario images */
+.scenario-enlarge { display: block; cursor: zoom-in; border-radius: 4px; }
+.scenario-enlarge-hint { display: block; margin-top: .5rem; color: #2457a7; font-size: .9rem; }
+.scenario-lightbox { width: min(1100px, 94vw); max-width: 94vw; max-height: 94dvh; padding: 0; border: 0; border-radius: 10px; margin: auto; overflow: hidden; background: white; color: #243142; }
+.scenario-lightbox::backdrop { background: rgba(15, 23, 42, .8); }
+.scenario-lightbox-toolbar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .75rem 1rem; border-bottom: 1px solid #ddd; }
+.scenario-lightbox-toolbar h2 { font-weight: 600; margin: 0; }
+.scenario-lightbox-toolbar > div { display: flex; gap: .5rem; }
+.scenario-lightbox-toolbar button { cursor: pointer; padding: .45rem .7rem; border: 1px solid #cad3de; border-radius: 5px; background: #f5f7fa; color: #243142; white-space: nowrap; }
+.scenario-lightbox-canvas { max-height: calc(94dvh - 85px); overflow: auto; padding: 1rem; overscroll-behavior: contain; }
+.scenario-lightbox-canvas img { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(94dvh - 120px); margin: auto; }
+.scenario-lightbox.is-zoomed .scenario-lightbox-canvas img { width: 1400px; max-width: none; max-height: none; }
+@media (max-width: 480px) {
+  .scenario-lightbox-toolbar { flex-wrap: wrap; }
+  .scenario-lightbox-canvas { max-height: calc(94dvh - 125px); }
+  .scenario-lightbox-canvas img { max-height: calc(94dvh - 160px); }
+}
+
+/* Repeated on-the-fly experiments */
+.onfly-study { background: #fff; }
+.onfly-study .onfly-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.5rem; margin:0 0 1.8rem; }
+.onfly-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:2rem 0; }
+.onfly-stats > div { padding:1.2rem .6rem; text-align:center; background:#eef3fb; border-radius:10px; }
+.onfly-stats strong { display:block; font-size:1.8rem; color:#315aa6; }
+.onfly-stats span { font-size:.9rem; }
+.onfly-study h3 { margin-top:2.2rem; }
+.onfly-study .onfly-tasks { min-width:720px; table-layout:fixed; }
+.onfly-study .onfly-tasks th:first-child { width:22%; }
+.onfly-study .onfly-tasks td { text-align:left; overflow-wrap:anywhere; }
+.onfly-study .onfly-results { min-width:960px; font-size:.86rem; }
+.onfly-study .onfly-results td { white-space:nowrap; }
+.onfly-study .onfly-notes { margin-top:1.2rem; font-size:.95rem; }
+.onfly-details { border:1px solid #dbe3ef; border-radius:8px; padding:1rem 1.25rem; margin:1.5rem 0 2rem; }
+.onfly-details summary { cursor:pointer; font-weight:600; color:#315aa6; }
+.onfly-details .content { margin-top:1rem; font-size:.95rem; }
+.onfly-equation { overflow-x:auto; }
+.onfly-chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; margin-top:1.5rem; }
+.onfly-chart { margin:1.5rem 0; padding:1.1rem; border:1px solid #e1e6ed; border-radius:10px; background:white; text-align:center; }
+.onfly-chart-grid .onfly-chart { margin:0; }
+.onfly-chart h4 { font-weight:600; font-size:1.1rem; margin-bottom:.8rem; }
+.onfly-chart img { display:block; width:100%; height:auto; }
+.onfly-study > .container > .onfly-chart { max-width:850px; margin-left:auto; margin-right:auto; }
+@media(max-width:768px) { .onfly-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .onfly-chart-grid { grid-template-columns:1fr; } }
+
+/* Accessible, copyable prompt examples */
+.prompt-text { border: 2px solid #d98335; border-radius: 9px; padding: 1.4rem 1.6rem; color: #17212e; background: #fff; text-align: left; font-size: 1rem; line-height: 1.65; }
+.prompt-text h4 { font-size: 1.13rem; font-weight: 700; margin: 1.5rem 0 .7rem; }
+.prompt-text h4:first-child { margin-top: 0; }
+.prompt-text > div { white-space: pre-line; overflow-wrap: anywhere; }
+@media(max-width:600px) { .prompt-text { padding: 1rem; font-size: .93rem; } }
