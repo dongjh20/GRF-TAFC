@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20261010-enlarge-fix">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -226,6 +226,54 @@
       }
     }
   </style>
+<style id="figure-layout-critical">
+/* Click-to-enlarge scenario images */
+.scenario-enlarge { display: block; min-width: 0; text-align: center; cursor: zoom-in; border-radius: 4px; }
+.scenario-enlarge-hint { display: block; width: 100%; white-space: nowrap; text-align: center; margin-top: .5rem; color: #2457a7; font-size: .9rem; }
+.scenario-lightbox { width: min(1100px, 94vw); max-width: 94vw; max-height: 94dvh; padding: 0; border: 0; border-radius: 10px; margin: auto; overflow: hidden; background: white; color: #243142; }
+.scenario-lightbox::backdrop { background: rgba(15, 23, 42, .8); }
+.scenario-lightbox-toolbar { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .75rem 1rem; border-bottom: 1px solid #ddd; }
+.scenario-lightbox-toolbar h2 { font-weight: 600; margin: 0; }
+.scenario-lightbox-toolbar > div { display: flex; gap: .5rem; }
+.scenario-lightbox-toolbar button { cursor: pointer; padding: .45rem .7rem; border: 1px solid #cad3de; border-radius: 5px; background: #f5f7fa; color: #243142; white-space: nowrap; }
+.scenario-lightbox-canvas { max-height: calc(94dvh - 85px); overflow: auto; padding: 1rem; overscroll-behavior: contain; }
+.scenario-lightbox-canvas img { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(94dvh - 120px); margin: auto; }
+.scenario-lightbox.is-zoomed .scenario-lightbox-canvas img { width: 1400px; max-width: none; max-height: none; }
+@media (max-width: 480px) {
+  .scenario-lightbox-toolbar { flex-wrap: wrap; }
+  .scenario-lightbox-canvas { max-height: calc(94dvh - 125px); }
+  .scenario-lightbox-canvas img { max-height: calc(94dvh - 160px); }
+}
+
+/* Repeated on-the-fly experiments */
+.onfly-study { background: #fff; }
+.onfly-study .onfly-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.5rem; margin:0 0 1.8rem; }
+.onfly-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:2rem 0; }
+.onfly-stats > div { padding:1.2rem .6rem; text-align:center; background:#eef3fb; border-radius:10px; }
+.onfly-stats strong { display:block; font-size:1.8rem; color:#315aa6; }
+.onfly-stats span { font-size:.9rem; }
+.onfly-study h3 { margin-top:2.2rem; }
+.onfly-study .onfly-tasks { min-width:720px; table-layout:fixed; }
+.onfly-study .onfly-tasks th:first-child { width:22%; }
+.onfly-study .onfly-tasks td { text-align:left; overflow-wrap:anywhere; }
+.onfly-study .onfly-results { min-width:960px; font-size:.86rem; }
+.onfly-study .onfly-results td { white-space:nowrap; }
+.onfly-study .onfly-notes { margin-top:1.2rem; font-size:.95rem; }
+.onfly-details { border:1px solid #dbe3ef; border-radius:8px; padding:1rem 1.25rem; margin:1.5rem 0 2rem; }
+.onfly-details summary { cursor:pointer; font-weight:600; color:#315aa6; }
+.onfly-details .content { margin-top:1rem; font-size:.95rem; }
+.onfly-equation { overflow-x:auto; }
+.onfly-chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; margin-top:1.5rem; }
+.onfly-chart { margin:1.5rem 0; padding:1.1rem; border:1px solid #e1e6ed; border-radius:10px; background:white; text-align:center; }
+.onfly-chart-grid .onfly-chart { margin:0; }
+.onfly-chart h4 { font-weight:600; font-size:1.1rem; margin-bottom:.8rem; }
+.onfly-chart img { display:block; width:100%; height:auto; }
+.onfly-study > .container > .onfly-chart { max-width:850px; margin-left:auto; margin-right:auto; }
+@media(max-width:768px) { .onfly-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .onfly-chart-grid { grid-template-columns:1fr; } }
+
+
+.scenario-enlarge > img { display: block; max-width: 100%; margin: 0 auto; }
+</style>
 </head>
 <body>
 
@@ -713,7 +761,7 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   </div>
   <div class="scenario-lightbox-canvas"><img alt=""></div>
 </dialog>
-<script src="static/js/scenario-lightbox.js" defer></script>
+<script src="static/js/scenario-lightbox.js?v=20261010-enlarge-fix" defer></script>
 
 </body>
 </html>
