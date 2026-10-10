@@ -149,10 +149,6 @@
       padding: 3.25rem 1.5rem;
     }
 
-    .task-category:nth-of-type(even) {
-      background: #f7f9fc;
-    }
-
     .task-heading {
       margin-bottom: 1.75rem !important;
       text-align: center;
@@ -187,6 +183,7 @@
     }
 
     .experiment-copy {
+      background: var(--grf-accent-soft);
       padding: 1.25rem 1.35rem 1.4rem;
     }
 
@@ -227,6 +224,10 @@
     }
   </style>
 <style id="figure-layout-critical">
+#simulation-demonstrations .study-intro, #real-world-experiments .study-intro, .task-category .video-timing-note { font-size:1.2rem !important; line-height:1.6; }
+.experiment-card .experiment-copy .video-description { font-size:1.2rem !important; line-height:1.6; margin:0; color:#263957; }
+.video-timing-note { padding:1rem 1.35rem; color:#526174; font-size:.95rem; }
+.onfly-nav a { display:inline-block; padding:.35rem .7rem; border-radius:6px; line-height:1.5; }
 /* Click-to-enlarge scenario images */
 .scenario-enlarge { display: block; min-width: 0; text-align: center; cursor: zoom-in; border-radius: 4px; }
 .scenario-enlarge-hint { display: block; width: 100%; white-space: nowrap; text-align: center; margin-top: .5rem; color: #2457a7; font-size: .9rem; }
@@ -247,7 +248,7 @@
 
 /* Repeated on-the-fly experiments */
 .onfly-study { background: #fff; }
-.onfly-study .onfly-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.5rem; margin:0 0 1.8rem; }
+.onfly-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.5rem; margin:0 0 1.8rem; }
 .onfly-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; margin:2rem 0; }
 .onfly-stats > div { padding:1.2rem .6rem; text-align:center; background:#eef3fb; border-radius:10px; }
 .onfly-stats strong { display:block; font-size:1.8rem; color:#315aa6; }
@@ -342,11 +343,26 @@
 
 
 
+<!-- Simulation video demonstrations -->
+<section class="section" id="simulation-demonstrations"><div class="container is-max-desktop"><h2 class="title is-2 has-text-centered">On-the-Fly Simulation Demonstrations</h2>
+
+<p class="study-intro">Seven demonstrations cover lane unavailability, accident-induced lane closures, longitudinal spacing adjustment, speech-driven structure switching, and image-guided shape transformation.</p>
+<h3 class="title is-3 task-heading">1. Independent Lane-Availability Tasks</h3><div class="experiment-grid">
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.1 Lane 1 Becomes Unavailable</h4><p class="video-description">Three-lane road; the formation adapts to the remaining two lanes.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/01-lane-1-unavailable.jpg" preload="metadata"><source src="static/videos/on-the-fly/01-lane-1-unavailable.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.2 Lane 3 Becomes Unavailable</h4><p class="video-description">The symmetric lane-closure condition, executed independently.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/02-lane-3-unavailable.jpg" preload="metadata"><source src="static/videos/on-the-fly/02-lane-3-unavailable.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.3 Accident in Lane 1</h4><p class="video-description">Four-lane road; the formation translates into available lanes.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/03-accident-lane-1.jpg" preload="metadata"><source src="static/videos/on-the-fly/03-accident-lane-1.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.4 Accident in Lane 2</h4><p class="video-description">Four-lane road; target positions avoid the closed lane.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/04-accident-lane-2.jpg" preload="metadata"><source src="static/videos/on-the-fly/04-accident-lane-2.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+</div><h3 class="title is-3 task-heading" style="margin-top:2.5rem">2. Successive Task Inputs During Operation</h3><div class="experiment-grid">
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">2.1 Longitudinal Spacing Adjustment</h4><p class="video-description">The desired spacing increases to 45 m and then decreases to 30 m.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/05-spacing-adjustment.jpg" preload="metadata"><source src="static/videos/on-the-fly/05-spacing-adjustment.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">2.2 Speech-Driven Structure Switching</h4><p class="video-description">The interlaced formation changes to a parallel formation; a subsequent instruction moves the single vehicle to the rear.</p><p class="video-description audio-input-note" style="margin-top:0.5rem">Audio is included: the spoken task inputs can be heard in this video.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/06-structure-switching.jpg" preload="metadata"><source src="static/videos/on-the-fly/06-structure-switching.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+<article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">2.3 Image-Guided Shape Transformation</h4><p class="video-description">An image specifies a circular shape; a subsequent instruction changes the radius reference to the three middle vehicles.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/07-shape-transformation.jpg" preload="metadata"><source src="static/videos/on-the-fly/07-shape-transformation.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
+</div></div></section><!-- End simulation video demonstrations -->
 <!-- Real-world experiments -->
 <section class="section experiment-overview" id="real-world-experiments">
   <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">Real-World Experiments</h2>
-    <p class="study-intro">Seven demonstrations cover spacing adjustment, ambulance yielding, obstacle avoidance, speech-driven structure switching, and image-guided shape transformation. All videos below are shown at real-time speed.</p>
+    <h2 class="title is-2 has-text-centered">On-the-Fly Real-World Experiments</h2>
+
+    <p class="study-intro">Seven demonstrations cover spacing adjustment, ambulance yielding, obstacle avoidance, speech-driven structure switching, and image-guided shape transformation.</p>
   </div>
 </section>
 
@@ -355,32 +371,24 @@
     <h2 class="title is-3 task-heading">1. Longitudinal Spacing Adjustment</h2>
     <div class="experiment-grid">
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/1-1-decrease-distance.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<h3 class="title is-4">1.1 Decreasing Longitudinal Spacing</h3>
+<p class="video-description">The vehicles reduce their longitudinal spacing in response to the operator's instruction.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/1-1-decrease-distance.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/1-1-decrease-distance.mp4?v=decrease-11196-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <h3 class="title is-4">1.1 Decreasing Longitudinal Spacing</h3>
-          <div class="task-input">
-            <span class="task-input-label">User Task Input</span>
-            “Decrease the longitudinal spacing.”
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration.</p></article>
 
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/1-2-increase-distance.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<h3 class="title is-4">1.2 Increasing Longitudinal Spacing</h3>
+<p class="video-description">The vehicles increase their longitudinal spacing in response to the operator's instruction.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/1-2-increase-distance.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/1-2-increase-distance.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <h3 class="title is-4">1.2 Increasing Longitudinal Spacing</h3>
-          <div class="task-input">
-            <span class="task-input-label">User Task Input</span>
-            “Increase the longitudinal spacing.”
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration.</p></article>
     </div>
   </div>
 </section>
@@ -390,32 +398,24 @@
     <h2 class="title is-3 task-heading">2. Yielding to High-Priority Vehicles</h2>
     <div class="experiment-grid">
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/2-1-avoid-transition.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<h3 class="title is-4">2.1 Yielding via Formation Transition</h3>
+<p class="video-description">The vehicles switch formation to clear a lane for the approaching ambulance.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/2-1-avoid-transition.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/2-1-avoid-transition.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <h3 class="title is-4">2.1 Yielding via Formation Transition</h3>
-          <div class="task-input">
-            <span class="task-input-label">User Task Input</span>
-            “Watch out for the ambulance!”
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration.</p></article>
 
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/2-2-avoid-translation.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<h3 class="title is-4">2.2 Yielding via Formation Translation</h3>
+<p class="video-description">The vehicles translate the formation into available lanes to make way for the ambulance.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/2-2-avoid-translation.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/2-2-avoid-translation.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <h3 class="title is-4">2.2 Yielding via Formation Translation</h3>
-          <div class="task-input">
-            <span class="task-input-label">User Task Input</span>
-            “Watch out for the ambulance!”
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration.</p></article>
     </div>
   </div>
 </section>
@@ -425,67 +425,51 @@
     <h2 class="title is-3 task-heading">3. Obstacle Avoidance</h2>
     <div class="experiment-grid is-single">
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/3-1-avoid-obstacle.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<p class="video-description">The vehicles adapt their formation to avoid the obstacle.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/3-1-avoid-obstacle.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/3-1-avoid-obstacle.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <div class="task-input">
-            <span class="task-input-label">User Task Input</span>
-            “Watch out for the obstacle!”
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration.</p></article>
     </div>
   </div>
 </section>
 
 <section class="task-category" id="formation-structure-switching">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 task-heading">4. Formation Structure Switching</h2>
+    <h2 class="title is-3 task-heading">4. Speech-Driven Structure Switching</h2>
     <div class="experiment-grid is-single">
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/4-1-structure-change.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<p class="video-description">Spoken instructions change the interlaced formation to a parallel formation and then move the single vehicle from the front to the rear.</p>
+<p class="video-description audio-input-note" style="margin-top:0.5rem">Audio is included: the spoken task inputs can be heard in this video.</p></div><video controls="" playsinline="" poster="static/videos/real-world-terminal/4-1-structure-change.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/4-1-structure-change.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <div class="task-input">
-            <span class="task-input-label">User Task Inputs via Speech</span>
-            <ol class="task-input-sequence">
-              <li>“Change the interlaced formation to a parallel formation.”</li>
-              <li>“For this parallel shape, move the single vehicle to the rear instead of the front.”</li>
-            </ol>
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration. The next instruction is issued while the vehicles are operating.</p></article>
     </div>
   </div>
 </section>
 
 <section class="task-category" id="formation-shape-transformation">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 task-heading">5. Formation Shape Transformation</h2>
+    <h2 class="title is-3 task-heading">5. Image-Guided Shape Transformation</h2>
     <div class="experiment-grid is-single">
       <article class="experiment-card">
-        <video controls playsinline preload="metadata">
-          <source src="static/videos/5-1-shape-change.mp4?v=realtime-20261010" type="video/mp4">
+<div class="experiment-copy">
+<p class="video-description">An image specifies a circular formation, and a subsequent instruction changes the radius reference from the vehicles on both sides to the three middle vehicles.</p>
+</div><video controls="" playsinline="" poster="static/videos/real-world-terminal/5-1-shape-change.jpg" preload="metadata">
+<source src="static/videos/real-world-terminal/5-1-shape-change.mp4?v=large-input-20261010" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
-        <div class="experiment-copy">
-          <div class="task-input">
-            <span class="task-input-label">User Task Inputs with Image</span>
-            <ol class="task-input-sequence">
-              <li>“Change the formation shape to match desired_shape.jpg in the current directory while keeping the vehicles on both sides fixed.”</li>
-              <li>“For the new circle shape, use the three middle vehicles as the radius reference instead of the vehicles on both sides.”</li>
-            </ol>
-          </div>
-        </div>
-      </article>
+<p class="video-timing-note">Because the experimental track is limited in length, the formation does not start moving at the beginning of the demonstration. The next instruction is issued while the vehicles are operating.</p></article>
     </div>
   </div>
 </section>
 <!-- End real-world experiments -->
+
+
 
 
 
@@ -495,7 +479,7 @@
  <div class="container is-max-desktop">
   <h2 class="title is-2 has-text-centered">Repeated On-the-Fly Formation Choreography</h2>
   <p class="study-intro">Seven CAVs adapt to five task categories while traveling at a desired speed of 20 m/s. Ten conditions, each repeated ten times independently with the same initial experience memory.</p>
-  <nav class="onfly-nav" aria-label="Experiment sections"><a href="#onfly-tasks">Tasks and inputs</a><a href="#onfly-results">Quantitative results</a><a href="#onfly-convergence">Convergence</a></nav>
+  
   <div class="onfly-stats"><div><strong>100/100</strong><span>Successful generations</span></div><div><strong>0/100</strong><span>Invalid outputs</span></div><div><strong>90/100</strong><span>Optimal outputs</span></div><div><strong>100/100</strong><span>Completed executions</span></div></div>
   <div class="content">
    <h3 class="title is-4" id="onfly-tasks">1. Tasks and inputs</h3>
