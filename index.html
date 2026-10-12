@@ -344,9 +344,9 @@
 
 
 <!-- Simulation video demonstrations -->
-<section class="section" id="simulation-demonstrations"><div class="container is-max-desktop"><h2 class="title is-2 has-text-centered">On-the-Fly Simulation Demonstrations</h2>
+<section class="section" id="simulation-demonstrations"><div class="container is-max-desktop"><h2 class="title is-2 has-text-centered">On-the-Fly Formation Choreography in Simulation</h2>
 
-<p class="study-intro">Seven demonstrations cover lane unavailability, accident-induced lane closures, longitudinal spacing adjustment, speech-driven structure switching, and image-guided shape transformation.</p>
+<p class="study-intro">Seven demonstrations cover lane unavailability, accident-induced lane closures, longitudinal spacing adjustment, speech-driven structure switching, and image-guided shape transformation. Quantitative results for these simulation tasks are reported below.</p>
 <h3 class="title is-3 task-heading">1. Independent Lane-Availability Tasks</h3><div class="experiment-grid">
 <article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.1 Lane 1 Becomes Unavailable</h4><p class="video-description">Three-lane road; the formation adapts to the remaining two lanes.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/01-lane-1-unavailable.jpg" preload="metadata"><source src="static/videos/on-the-fly/01-lane-1-unavailable.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
 <article class="experiment-card"><div class="experiment-copy"><h4 class="title is-4">1.2 Lane 3 Becomes Unavailable</h4><p class="video-description">The symmetric lane-closure condition, executed independently.</p></div><video controls="" playsinline="" poster="static/videos/on-the-fly/02-lane-3-unavailable.jpg" preload="metadata"><source src="static/videos/on-the-fly/02-lane-3-unavailable.mp4?v=input-order-20261010" type="video/mp4"/>Your browser does not support the video tag.</video></article>
@@ -360,7 +360,7 @@
 <!-- Real-world experiments -->
 <section class="section experiment-overview" id="real-world-experiments">
   <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">On-the-Fly Real-World Experiments</h2>
+    <h2 class="title is-2 has-text-centered">Real-World Experiments</h2>
 
     <p class="study-intro">Seven demonstrations cover spacing adjustment, ambulance yielding, obstacle avoidance, speech-driven structure switching, and image-guided shape transformation.</p>
   </div>
@@ -477,8 +477,8 @@
 <!-- Repeated on-the-fly experiments -->
 <section class="section reflection-study onfly-study" id="on-the-fly-experiments">
  <div class="container is-max-desktop">
-  <h2 class="title is-2 has-text-centered">Repeated On-the-Fly Formation Choreography</h2>
-  <p class="study-intro">Seven CAVs adapt to five task categories while traveling at a desired speed of 20 m/s. Ten conditions, each repeated ten times independently with the same initial experience memory.</p>
+  <h2 class="title is-2 has-text-centered">Simulation Details and Quantitative Results</h2>
+  <p class="study-intro">The following experimental details and quantitative results correspond to the simulation videos above. Seven CAVs adapt to five task categories. Each of the ten conditions is repeated ten times independently with the same initial experience memory.</p>
   
   <div class="onfly-stats"><div><strong>100/100</strong><span>Successful generations</span></div><div><strong>0/100</strong><span>Invalid outputs</span></div><div><strong>90/100</strong><span>Optimal outputs</span></div><div><strong>100/100</strong><span>Completed executions</span></div></div>
   <div class="content">
@@ -539,7 +539,7 @@
   <div class="onfly-stats"><div><strong>5</strong><span>Desired speeds: 15–25 m/s</span></div><div><strong>7</strong><span>Spacings: 15–45 m</span></div><div><strong>35 + 35</strong><span>Switching and recovery runs</span></div><div><strong>5 s</strong><span>Post-completion observation</span></div></div>
   <div class="content">
    <h3 class="title is-4">1. Representative maneuvers</h3>
-   <p><strong>Switching:</strong> seven CAVs initially occupy Lanes 1–3 in a 2–3–2 interlaced formation at a desired speed of 20 m/s and within-lane spacing of 30 m. Lane 1 becomes unavailable. The previously generated optimal target formation allocates four vehicles to Lane 2 and three to Lane 3, requiring three lane changes:</p>
+   <p><strong>Switching:</strong> seven CAVs initially occupy Lanes 1–3 in a 2–3–2 interlaced formation with a desired speed of 20 m/s and within-lane spacing of 30 m. Lane 1 becomes unavailable. The previously generated optimal target formation allocates four vehicles to Lane 2 and three to Lane 3, requiring three lane changes:</p>
    <p>\(\mathcal{S}_{\mathrm{switch}}=[(0,2),(2,2),(4,2),(6,2),(1,3),(3,3),(5,3)].\)</p>
    <p><strong>Recovery:</strong> the same fleet starts with longitudinal velocity offsets up to ±2 m/s and lateral offsets up to ±0.6 m. Initial within-lane spacings are 21, 42, 24, and 24 m instead of 30 m. The desired interlaced formation stays unchanged:</p>
    <p>\(\mathcal{S}_{\mathrm{recovery}}=[(1,1),(3,1),(0,2),(2,2),(4,2),(1,3),(3,3)].\)</p>
